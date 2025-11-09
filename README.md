@@ -1,7 +1,7 @@
 # pidevsistemas
-# Projeto: Modelo de Gestão de Cadastros
+# Projeto: Gestão de Cadastros
 
-Este projeto documenta o design de um modelo de dados (via UML) e a implementação parcial de um banco de dados (via SQL) para um sistema de gestão. O sistema é projetado para gerenciar o cadastro de diferentes tipos de entidades: **Alunos**, **Professores** e **Fornecedores**.
+Este projeto documenta o design de um modelo de dados (via UML) e a implementação de um banco de dados (via SQL) para um sistema de gestão. O sistema é projetado para gerenciar o cadastro de diferentes tipos de entidades: **Alunos**, **Professores** e **Fornecedores**.
 
 ## 1. Modelo de Dados (Diagrama UML)
 
