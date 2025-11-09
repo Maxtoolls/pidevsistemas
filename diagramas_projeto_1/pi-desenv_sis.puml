@@ -1,0 +1,63 @@
+@startuml
+'--------------------------------------------------
+' 1️⃣ Classe abstrata Pessoa (atributos comuns)
+'--------------------------------------------------
+abstract class Pessoa {
+    - id: UUID
+    - nome: String
+    - endereco: String
+    - telefone: String
+    - email: String
+}
+
+'--------------------------------------------------
+' 2️⃣ Sub‑classes de Pessoa
+'--------------------------------------------------
+class PessoaFisica extends Pessoa {
+    - cpf: String
+    - dataNascimento: Date
+    - enderecoResidencial: String
+    - contato: String
+}
+class PessoaJuridica extends Pessoa {
+    - cnpj: String
+    - inscricaoEstadual: String
+    - razaoSocial: String
+}
+
+'--------------------------------------------------
+' 3️⃣ Sub‑classes específicas (professor, aluno, fornecedor)
+'--------------------------------------------------
+class Professor extends PessoaFisica {
+    - departamentoVinculo: String
+    - titulacao: String
+    - cargaHoraria: Int
+    - matricula: String
+}
+class Aluno extends PessoaFisica {
+    - curso: Curso
+    - anoIngresso: Int
+    - modalidade: String
+}
+class Fornecedor extends PessoaJuridica {
+    - tipoServico: String
+    - documentosAnexados: List<Documento>
+    - statusAprovacao: StatusFornecedor
+}
+
+'--------------------------------------------------
+' 4️⃣ Interface de validação comum
+'--------------------------------------------------
+interface IPessoaCadastro {
+    + validarCPF(): Boolean
+    + validarCNPJ(): Boolean
+}
+
+'--------------------------------------------------
+' 5️⃣ Relacionamentos (implements)
+'--------------------------------------------------
+Professor ..|> IPessoaCadastro : implements
+Aluno ..|> IPessoaCadastro : implements
+Fornecedor ..|> IPessoaCadastro : implements
+
+@enduml

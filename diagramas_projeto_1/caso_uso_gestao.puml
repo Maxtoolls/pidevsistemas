@@ -1,0 +1,94 @@
+@startuml
+'=========================================================
+' 1️⃣ Definição de atores
+'=========================================================
+actor "Aluno" as Aluno
+actor "Professor" as Professor
+actor "Fornecedor" as Fornecedor
+actor "Administrador" as Admin
+
+'=========================================================
+' 2️⃣ Casos de Uso
+'=========================================================
+usecase "Cadastrar Pessoa Física" as UC_CadPF
+usecase "Cadastrar Pessoa Jurídica" as UC_CadPJ
+usecase "Validar CPF/CNPJ" as UC_ValCPF_CNPJ
+usecase "Matricular Aluno" as UC_Matricula
+usecase "Aprovar Fornecedor" as UC_AprovFornecedor
+usecase "Consultar Cadastro" as UC_ConsCadastro
+usecase "Emitir Relatório de Matrículas" as UC_RelMatr
+usecase "Gerenciar Cursos" as UC_GerCursos
+
+'=========================================================
+' 3️⃣ Relações entre atores e casos de uso
+'=========================================================
+Aluno --> UC_CadPF
+Aluno --> UC_Matricula
+Aluno --> UC_ConsCadastro
+
+Professor --> UC_CadPF
+Professor --> UC_ConsCadastro
+
+Fornecedor --> UC_CadPJ
+Fornecedor --> UC_AprovFornecedor
+
+Admin --> UC_CadPF
+Admin --> UC_CadPJ
+Admin --> UC_ValCPF_CNPJ
+Admin --> UC_RelMatr
+Admin --> UC_GerCursos
+
+'=========================================================
+' 4️⃣ Extensões e Generalizações (opcional)
+'=========================================================
+UC_Matricula .down.> UC_CadPF : <<include>>
+UC_AprovFornecedor .down.> UC_ValCPF_CNPJ : <<extend>>
+
+@enduml
+@startuml
+'=========================================================
+' 1️⃣ Definição de atores
+'=========================================================
+actor "Aluno" as Aluno
+actor "Professor" as Professor
+actor "Fornecedor" as Fornecedor
+actor "Administrador" as Admin
+
+'=========================================================
+' 2️⃣ Casos de Uso
+'=========================================================
+usecase "Cadastrar Pessoa Física" as UC_CadPF
+usecase "Cadastrar Pessoa Jurídica" as UC_CadPJ
+usecase "Validar CPF/CNPJ" as UC_ValCPF_CNPJ
+usecase "Matricular Aluno" as UC_Matricula
+usecase "Aprovar Fornecedor" as UC_AprovFornecedor
+usecase "Consultar Cadastro" as UC_ConsCadastro
+usecase "Emitir Relatório de Matrículas" as UC_RelMatr
+usecase "Gerenciar Cursos" as UC_GerCursos
+
+'=========================================================
+' 3️⃣ Relações entre atores e casos de uso
+'=========================================================
+Aluno --> UC_CadPF
+Aluno --> UC_Matricula
+Aluno --> UC_ConsCadastro
+
+Professor --> UC_CadPF
+Professor --> UC_ConsCadastro
+
+Fornecedor --> UC_CadPJ
+Fornecedor --> UC_AprovFornecedor
+
+Admin --> UC_CadPF
+Admin --> UC_CadPJ
+Admin --> UC_ValCPF_CNPJ
+Admin --> UC_RelMatr
+Admin --> UC_GerCursos
+
+'=========================================================
+' 4️⃣ Extensões e Generalizações (opcional)
+'=========================================================
+UC_Matricula .down.> UC_CadPF : <<include>>
+UC_AprovFornecedor .down.> UC_ValCPF_CNPJ : <<extend>>
+
+@enduml
