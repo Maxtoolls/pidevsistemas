@@ -35,4 +35,4 @@ Os scripts SQL fornecidos implementam todo o escopo do projeto (Cadastro de forn
 
 Toda a funcionalidade do sistema foi prototipada para simular toda a funcionalidade de cada tela, suas tratativas de erro e de sucesso.
 
-Protótipos disponíveis no [Miro](https://miro.com/welcomeonboard/OVNON01MS3NIU2daY2dNZkQvSElwUjU2OUJsamhacWhRZTEyQWduVXRVYWdNa3V1RGhOdjVkcVZxZGhkdEdUZDdDOVE1QnhpTnVEMnVmcW5EcjRiTzQ2dGgrV0NZSG5FUks5VkRpZnRQZy9vWm1kT3dWNm42dEovYXJNRUpKMTZBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=842368126642)
+Protótipos disponíveis no [Miro](https://miro.com/app/board/uXjVJwhqqIo=/)
